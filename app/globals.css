@@ -134,3 +134,9 @@ button{font-size:14px;min-height:44px}.main-nav button,.new-action,.sidebar-guid
 .date-number{height:38px;font-size:26px;}
 .sheet-tools{padding-bottom:8px;}
 @media(max-width:767px){.sheet-heading{padding-block:8px;}.date-number{display:none;}.sheet-meta{gap:0;}.sheet-tools{padding-bottom:4px;}.ticket-time{width:56px;}.ticket-reference{font-size:12px;}.ticket-client{font-size:14px;}}
+
+.compact-view-options{display:none;}
+.job-ticket:before{top:0;bottom:0;}
+.ticket-time{align-self:stretch;border-right:1px dashed #C9CCBD;padding-right:10px;width:72px;}
+.ticket-body>span:last-child{margin-top:2px;}
+@media(max-width:767px){.sheet-tools{display:none;}.compact-view-options{display:flex;width:100%;align-items:center;justify-content:space-between;gap:12px;font-size:14px;}.compact-view-options .view-switch{width:auto;}.compact-view-options button{padding-inline:18px;}.ticket-time{width:66px;}.sheet-heading{padding-block:12px;}.job-ticket{padding-block:16px;}.ticket-title{font-size:17px;}}
