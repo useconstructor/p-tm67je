@@ -181,3 +181,11 @@ button{font-size:14px;min-height:44px}.main-nav button,.new-action,.sidebar-guid
  .is-list .ticket-reference{margin-bottom:8px;font-size:12px;}
  .is-list .ticket-arrow{margin-top:26px;}
 }
+.agenda-sheet.is-list{grid-template-rows:min-content min-content 1fr;row-gap:0;}
+.is-list .sheet-tools{align-self:start;align-content:flex-start;gap:8px;}
+.is-list .sheet-heading{padding-block:18px 14px;gap:12px;}
+.is-list .sheet-meta{gap:4px;}
+.agenda-note{font-size:13px;}
+@media(min-width:768px){.agenda-note{margin-left:248px;}}
+@media(min-width:768px) and (max-width:1100px){.is-list .ticket-time{width:96px;flex-shrink:0;}.is-list .ticket-time strong{font-size:23px;}.agenda-note{margin-left:195px;}}
+@media(max-width:767px){.is-list .sheet-heading{padding-block:14px 18px;}.is-list .ticket-time{width:80px;}.is-list .ticket-time>span{font-size:15px;}.is-list .ticket-reference{font-size:13px;}}
