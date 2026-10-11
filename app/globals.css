@@ -200,3 +200,8 @@ button{font-size:14px;min-height:44px}.main-nav button,.new-action,.sidebar-guid
  .is-list .ticket-time{width:104px;}
  .is-list .ticket-title{font-size:22px;}
 }
+
+@media(min-width:1101px){.agenda-sheet.is-list{grid-template-columns:280px minmax(0,1fr);}.is-list .sheet-date h2{max-width:280px;}.is-list .sheet-tools{gap:10px;}.is-list .sheet-heading{padding-top:14px;}}
+.sheet-meta,.sheet-meta>span:first-child,.zone-label{font-size:14px;}
+.order-hint{font-size:14px;color:#575D50;}
+@media(max-width:767px){.sheet-meta,.sheet-meta>span:first-child,.zone-label,.sheet-meta .zone-label{font-size:12px;}.page-header{padding-block:10px;}.is-list .sheet-heading{padding-block:12px 16px;}.order-hint{font-size:13px;}}
