@@ -140,3 +140,44 @@ button{font-size:14px;min-height:44px}.main-nav button,.new-action,.sidebar-guid
 .ticket-time{align-self:stretch;border-right:1px dashed #C9CCBD;padding-right:10px;width:72px;}
 .ticket-body>span:last-child{margin-top:2px;}
 @media(max-width:767px){.sheet-tools{display:none;}.compact-view-options{display:flex;width:100%;align-items:center;justify-content:space-between;gap:12px;font-size:14px;}.compact-view-options .view-switch{width:auto;}.compact-view-options button{padding-inline:18px;}.ticket-time{width:66px;}.sheet-heading{padding-block:12px;}.job-ticket{padding-block:16px;}.ticket-title{font-size:17px;}}
+
+/* An operational workbench: day context beside individual work orders. */
+.agenda-sheet.is-list{display:grid;grid-template-columns:220px minmax(0,1fr);border:0;border-radius:0;background:transparent;box-shadow:none;align-items:start;column-gap:28px;}
+.is-list .sheet-heading{grid-column:1;grid-row:1;display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding:22px 0;border-top:3px solid #536335;}
+.is-list .sheet-date{display:block;}
+.is-list .date-number{display:none;}
+.is-list .sheet-date h2{font-size:26px;line-height:1.2;font-weight:600;max-width:200px;letter-spacing:-.7px;}
+.is-list .sheet-meta{width:auto;text-align:left;margin:0;align-items:flex-start;gap:8px;}
+.is-list .zone-label{justify-content:flex-start;}
+.is-list .sheet-tools{grid-column:1;grid-row:2;padding:0 0 20px;display:flex;flex-wrap:wrap;justify-content:flex-start;border:0;}
+.is-list .sheet-body{grid-column:2;grid-row:1 / 4;min-width:0;}
+.is-list .day-list{display:grid;gap:16px;}
+.is-list .job-ticket{border:1px solid #C9CCBD!important;border-radius:3px!important;background:#fff;gap:24px;padding:24px;box-shadow:0 3px 0 #DFE1D3;text-align:left;transition:background .15s,box-shadow .15s;}
+.is-list .job-ticket:hover{background:#FBFCF7;box-shadow:0 4px 0 #CBD3B9;}
+.is-list .job-ticket:before{left:-1px;width:4px;border-radius:3px 0 0 3px;}
+.is-list .ticket-time{width:95px;padding-right:18px;gap:8px;}
+.is-list .ticket-time strong{font-size:25px;line-height:1.2;}
+.is-list .ticket-time>span{font-size:16px;}
+.is-list .ticket-title{font-size:23px;line-height:1.3;letter-spacing:-.3px;}
+.is-list .ticket-reference{font-size:13px;margin-bottom:10px;}
+.is-list .ticket-client{font-size:16px;margin-top:8px;margin-bottom:16px;}
+.is-list .ticket-arrow{margin-top:30px;}
+.is-list .empty-jobs{border:1px dashed #C9CCBD;background:#FFFFFF80;border-radius:3px;}
+.is-list .list-day-heading{background:transparent;border:0;padding:16px 0 0;}
+.is-list .agenda-loading{background:#fff;border:1px solid #C9CCBD;}
+@media(min-width:768px) and (max-width:1100px){.agenda-sheet.is-list{grid-template-columns:175px minmax(0,1fr);gap:20px;}.is-list .sheet-date h2{font-size:23px;}.is-list .job-ticket{padding:20px;gap:18px;}.is-list .ticket-time{width:75px;padding-right:12px;}.is-list .ticket-title{font-size:20px;}}
+@media(max-width:767px){
+ .agenda-sheet.is-list{display:block;}
+ .is-list .sheet-heading{flex-direction:row;align-items:center;gap:12px;padding:14px 0 18px;}
+ .is-list .sheet-date h2{font-size:20px;line-height:1.3;max-width:230px;}
+ .is-list .sheet-meta{margin-left:auto;align-items:flex-end;text-align:right;gap:4px;flex-shrink:0;}
+ .is-list .sheet-tools{display:none;}
+ .is-list .job-ticket{padding:20px 16px;gap:16px;}
+ .is-list .ticket-time{width:70px;padding-right:12px;gap:6px;}
+ .is-list .ticket-time strong{font-size:22px;}
+ .is-list .ticket-time>span{font-size:14px;}
+ .is-list .ticket-title{font-size:20px;line-height:1.3;}
+ .is-list .ticket-client{font-size:15px;line-height:1.5;margin-top:8px;margin-bottom:14px;}
+ .is-list .ticket-reference{margin-bottom:8px;font-size:12px;}
+ .is-list .ticket-arrow{margin-top:26px;}
+}
