@@ -189,3 +189,14 @@ button{font-size:14px;min-height:44px}.main-nav button,.new-action,.sidebar-guid
 @media(min-width:768px){.agenda-note{margin-left:248px;}}
 @media(min-width:768px) and (max-width:1100px){.is-list .ticket-time{width:96px;flex-shrink:0;}.is-list .ticket-time strong{font-size:23px;}.agenda-note{margin-left:195px;}}
 @media(max-width:767px){.is-list .sheet-heading{padding-block:14px 18px;}.is-list .ticket-time{width:80px;}.is-list .ticket-time>span{font-size:15px;}.is-list .ticket-reference{font-size:13px;}}
+
+.order-hint{font-size:13px;color:#686C60;margin-top:16px;}
+@media(min-width:768px) and (max-width:1100px){
+ .agenda-sheet.is-list{display:block;}
+ .is-list .sheet-heading{flex-direction:row;align-items:center;justify-content:space-between;padding:16px 0;}
+ .is-list .sheet-date h2{max-width:none;font-size:24px;}
+ .is-list .sheet-meta{text-align:right;align-items:flex-end;}
+ .is-list .sheet-tools{padding:0 0 16px;justify-content:space-between;}
+ .is-list .ticket-time{width:104px;}
+ .is-list .ticket-title{font-size:22px;}
+}
