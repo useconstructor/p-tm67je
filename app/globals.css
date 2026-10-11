@@ -125,3 +125,12 @@ button{font-size:14px;min-height:44px}.main-nav button,.new-action,.sidebar-guid
 .ticket-time strong{font-size:17px;}
 .ticket-client{margin-bottom:8px;}
 .ticket-body>span:last-child{font-size:13px;}
+
+.ticket-time>span{white-space:nowrap;}
+.ticket-title{font-weight:600;}
+.ticket-client{font-size:14px;color:#505647;}
+.ticket-reference{font-size:13px;}
+.sheet-heading{padding-block:10px;}
+.date-number{height:38px;font-size:26px;}
+.sheet-tools{padding-bottom:8px;}
+@media(max-width:767px){.sheet-heading{padding-block:8px;}.date-number{display:none;}.sheet-meta{gap:0;}.sheet-tools{padding-bottom:4px;}.ticket-time{width:56px;}.ticket-reference{font-size:12px;}.ticket-client{font-size:14px;}}

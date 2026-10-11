@@ -56,7 +56,7 @@ function TimeGrid({days,jobs,zone,onOpen,onCreate,filtered,clear}:{days:string[]
 
 function JobTicket({job:j,day:d,zone,onOpen}:{job:Job;day:string;zone:string;onOpen:(j:Job)=>void}){
  const st=localParts(j.start,zone),et=localParts(j.end,zone);
- return <button data-job-id={j.id} className={`job-ticket ticket-${j.status}`} onClick={()=>onOpen(j)} aria-label={`Ver trabajo: ${j.title}, ${j.client_name}, ${st.time} a ${et.time}, ${statuses[j.status]}`}><span className="ticket-time"><strong>{st.date<d?'00:00':st.time}</strong><span>– {et.date>d?'24:00':et.time}</span></span><span className="ticket-body"><span className="ticket-reference">Orden {j.id.slice(0,6).toUpperCase()}</span><span className="ticket-title">{j.title}</span><span className="ticket-client">Cliente: {j.client_name}</span><StatusBadge status={j.status}/></span><ArrowUpRight size={17} className="ticket-arrow"/></button>;
+ return <button data-job-id={j.id} className={`job-ticket ticket-${j.status}`} onClick={()=>onOpen(j)} aria-label={`Ver trabajo: ${j.title}, ${j.client_name}, ${st.time} a ${et.time}, ${statuses[j.status]}`}><span className="ticket-time"><strong>{st.date<d?'00:00':st.time}</strong><span>– {et.date>d?'24:00':et.time}</span></span><span className="ticket-body"><span className="ticket-reference">Orden {j.id.slice(0,6).toUpperCase()}</span><span className="ticket-title">{j.title}</span><span className="ticket-client">Cliente: {j.client_name}</span><StatusBadge status={j.status}/></span><ChevronRight size={19} className="ticket-arrow"/></button>;
 }
 function CompactSchedule({day,jobs,zone,onOpen}:{day:string;jobs:Job[];zone:string;onOpen:(j:Job)=>void}){
  const range=interval(day,false,zone),list=jobs.filter(j=>j.start<range.end&&j.end>range.start);
