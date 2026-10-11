@@ -70,3 +70,18 @@ button{font-size:14px;min-height:44px}.main-nav button,.new-action,.sidebar-guid
 @media(max-width:374px){.brand-name,.is-compact .brand-name{font-size:12px}.brand-name strong{font-size:14px}.main-nav button{padding:0 8px}.main-nav button svg{display:none}.page-header h1{font-size:21px}.new-action{gap:4px}.new-action svg{display:none}.date-picker label{padding:0 8px}.date-navigation>button:first-child{padding:0 8px}}
 
 .date-picker input{font-size:16px!important}.status-help summary:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px}
+
+.schedule-pan{max-height:600px;overflow:auto;}
+.sheet-heading{padding-block:16px;}
+.grid-job{padding:6px 8px!important;}
+.grid-job-title,.grid-job-client{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px;line-height:1.25;margin-top:3px;}
+.grid-job:hover .grid-job-title,.grid-job:hover .grid-job-client,.grid-job:focus-visible .grid-job-title,.grid-job:focus-visible .grid-job-client{white-space:normal;}
+@media(max-width:767px){
+ .page-header{padding-block:12px;}
+ .page-content{padding-top:8px;}
+ .date-toolbar{gap:6px;}
+ .search-toolbar{margin-block:8px;}
+ .sheet-heading{padding-block:12px;}
+ .sheet-tools{padding-bottom:4px;}
+ .sheet-meta .zone-label{display:none;}
+}
