@@ -1,7 +1,5 @@
-export default function Home() {
-  return (
-    <main className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">Constructor Template</h1>
-    </main>
-  );
-}
+import Agenda from '@/components/agenda';
+import {zone} from '@/lib/api';
+import {today} from '@/lib/time';
+export const dynamic='force-dynamic';
+export default function Page(){return <Agenda zone={zone} initialDate={today(zone)}/>;}

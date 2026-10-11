@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#F4F7F8",
+  "secondaryColor": "#FFFFFF",
+  "backgroundColor": "#F4F7F8",
+  "textColor": "#20313B",
+  "accentColor": "#176477",
+  "fontHeading": "IBM Plex Sans",
+  "fontBody": "IBM Plex Mono",
+  "borderRadius": "0.25rem",
+  "logoText": "Agenda Taller",
+  "logoImageUrl": "https://vabacntbfcwhgkjqajcw.supabase.co/storage/v1/object/public/screenshots/projects/P-TM67JE/logo.png",
+  "tone": "professional"
+}

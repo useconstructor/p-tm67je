@@ -1,33 +1,45 @@
 @import "tailwindcss";
-
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/ibm-plex-mono/400.css';
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  --color-background: oklch(1 0 0);
-  --color-foreground: oklch(0.145 0 0);
-  --color-card: oklch(1 0 0);
-  --color-card-foreground: oklch(0.145 0 0);
-  --color-primary: oklch(0.205 0 0);
-  --color-primary-foreground: oklch(0.985 0 0);
-  --color-secondary: oklch(0.97 0 0);
-  --color-secondary-foreground: oklch(0.205 0 0);
-  --color-muted: oklch(0.97 0 0);
-  --color-muted-foreground: oklch(0.556 0 0);
-  --color-accent: oklch(0.97 0 0);
-  --color-accent-foreground: oklch(0.205 0 0);
-  --color-destructive: oklch(0.577 0.245 27.325);
-  --color-border: oklch(0.922 0 0);
-  --color-input: oklch(0.922 0 0);
-  --color-ring: oklch(0.708 0 0);
-  --radius: 0.5rem;
+ --font-sans: 'IBM Plex Sans', sans-serif;
+ --font-mono: 'IBM Plex Mono', monospace;
+ --color-background: #F4F7F8;
+ --color-foreground: #20313B;
+ --color-card: #FFFFFF;
+ --color-card-foreground: #20313B;
+ --color-primary: #176477;
+ --color-primary-foreground: #FFFFFF;
+ --color-secondary: #FFFFFF;
+ --color-secondary-foreground: #20313B;
+ --color-muted: #ECF1F3;
+ --color-muted-foreground: #526875;
+ --color-accent: #E6EFF1;
+ --color-accent-foreground: #176477;
+ --color-destructive: #A23935;
+ --color-destructive-foreground: #FFFFFF;
+ --color-border: #DCE4E8;
+ --color-input: #CBD6DC;
+ --color-ring: #176477;
+ --color-amber: #A45B08;
+ --radius: .25rem;
 }
-
 @layer base {
-  * {
-    border-color: var(--color-border);
-  }
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-  }
+ * {border-color:var(--color-border);}
+ body {background:var(--color-background);color:var(--color-foreground);font-family:var(--font-sans);font-size:16px;line-height:1.5;}
+ button, a, input, select, textarea {touch-action:manipulation;}
+ button, a { -webkit-tap-highlight-color:transparent; }
+ button:not(:disabled),select {cursor:pointer;}
+ button,input,select {min-height:44px;}
+ input,textarea,select {font-size:16px!important;border-radius:4px!important;}
+ button {border-radius:4px!important;}
+ :focus-visible {outline:2px solid var(--color-primary);outline-offset:3px;}
+ ::selection {background:#D2E8EC;}
 }
+@keyframes panel-in {from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:translateX(0)}}
+@keyframes backdrop-in {from{opacity:0}to{opacity:1}}
+@utility panel-animate {animation:panel-in .2s ease-out;}
+@utility backdrop-animate {animation:backdrop-in .15s ease-out;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
