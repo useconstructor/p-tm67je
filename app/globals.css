@@ -85,3 +85,30 @@ button{font-size:14px;min-height:44px}.main-nav button,.new-action,.sidebar-guid
  .sheet-tools{padding-bottom:4px;}
  .sheet-meta .zone-label{display:none;}
 }
+
+/* Keep short appointments readable without stretching their time span. */
+.presentation-switch{display:flex;}
+.sheet-tools{justify-content:space-between;}
+.grid-job{display:grid;grid-template-columns:110px minmax(0,1fr);grid-template-rows:1fr 1fr;column-gap:12px;align-content:center;}
+.grid-job>div:first-child{grid-column:1;grid-row:1 / 3;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;}
+.grid-job>div:first-child>span:last-child{padding:2px 6px;font-size:11px;}
+.grid-job-title,.grid-job-client{grid-column:2;align-self:center;margin:0;line-height:1.3;}
+.agenda-list{display:block;}
+.sheet-heading{padding-block:12px;}
+@media(max-width:767px){
+ .date-toolbar{flex-wrap:nowrap;}
+ .date-navigation{width:auto;flex:1;}
+ .date-picker{margin-left:4px;}
+ .date-picker label{padding:0 8px;}
+ .date-picker label span{display:none;}
+ .date-picker label svg:last-child{display:none;}
+ .date-toolbar>.view-switch{width:auto;}
+ .date-toolbar>.view-switch button{padding:0 10px;}
+ .sheet-date h2{font-size:16px;}
+ .sheet-meta{width:auto;margin-left:auto;}
+ .sheet-meta .zone-label{display:none;}
+ .sheet-heading{align-items:center;gap:6px;}
+ .sheet-date{gap:8px;}
+ .date-number{width:30px;padding-right:8px;font-size:23px;}
+ .sheet-meta>span:first-child{font-size:11px;}
+}
